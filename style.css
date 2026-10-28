@@ -630,6 +630,13 @@ a.tile:hover {
   border-bottom: 1px solid #888
 }
 
+.contact-phone {
+  display: inline-block;
+  font-size: clamp(24px, 5vw, 65px);
+  margin: 20px 0;
+  border-bottom: 1px solid #888
+}
+
 .back-home {
   display: block;
   margin-top: 80px;
