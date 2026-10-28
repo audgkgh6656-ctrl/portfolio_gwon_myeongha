@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Portfolio — YOUR NAME</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio-page.css">
+    <link rel="stylesheet" href="shared-pages.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="typography.css">
+  </head>
+  <body class="inner-page portfolio-layout">
+    <nav class="site-nav" aria-label="페이지 메뉴">
+      <div class="nav-links">
+        <a href="index.html#home">Home</a
+        ><a class="active" aria-current="page" href="portfolio.html"
+          >Portfolio</a
+        ><a href="about.html">About</a><a href="contact.html">Contact</a
+        ><a href="resume.html">Resume</a>
+      </div>
+    </nav>
+    <main class="portfolio-page" id="top">
+      <h1 class="portfolio-title">portfolio</h1>
+      <div class="filter-bar" role="group" aria-label="프로젝트 카테고리">
+        <button
+          type="button"
+          data-filter="all"
+          aria-pressed="true"
+          class="selected"
+        >
+          all</button
+        ><button
+          type="button"
+          data-filter="detail"
+          aria-pressed="false"
+          class=""
+        >
+          Detail Page</button
+        ><button type="button" data-filter="uiux" aria-pressed="false" class="">
+          Web / UI Design</button
+        ><button
+          type="button"
+          data-filter="banner"
+          aria-pressed="false"
+          class=""
+        >
+          Banner & Promotion</button
+        ><button
+          type="button"
+          data-filter="photography"
+          aria-pressed="false"
+          class=""
+        >
+          Photography</button
+        ><button
+          type="button"
+          data-filter="video"
+          aria-pressed="false"
+          class=""
+        >
+          Video & Motion</button
+        ><button
+          type="button"
+          data-filter="branding"
+          aria-pressed="false"
+          class=""
+        >
+          Branding
+        </button>
+      </div>
+      <div class="portfolio-grid">
+        <article class="work-card" data-category="detail">
+          <a
+            class="project-preview"
+            href="#project-01"
+            data-project="01"
+            aria-label="Product Detail Page 프로젝트 자세히 보기"
+            ><div class="project-placeholder" aria-hidden="true"></div
+          ></a>
+          <div class="project-category">Detail Page</div>
+          <div class="project-title-row">
+            <h2>Product Detail Page</h2>
+            <a
+              href="#project-01"
+              data-project="01"
+              aria-label="Product Detail Page 자세히 보기"
+              >↗</a
+            >
+          </div>
+          <p class="project-description">상품의 매력을 전달하는 상세페이지</p>
+        </article>
+        <article class="work-card" data-category="uiux">
+          <a
+            class="project-preview"
+            href="#project-02"
+            data-project="02"
+            aria-label="Website Redesign 프로젝트 자세히 보기"
+            ><div class="project-placeholder" aria-hidden="true"></div
+          ></a>
+          <div class="project-category">Web / UI Design</div>
+          <div class="project-title-row">
+            <h2>Website Redesign</h2>
+            <a
+              href="#project-02"
+              data-project="02"
+              aria-label="Website Redesign 자세히 보기"
+              >↗</a
+            >
+          </div>
+          <p class="project-description">웹사이트 및 UI 리디자인</p>
+        </article>
+        <article class="work-card" data-category="banner">
+          <a
+            class="project-preview"
+            href="#project-03"
+            data-project="03"
+            aria-label="Campaign Banner 프로젝트 자세히 보기"
+            ><div class="project-placeholder" aria-hidden="true"></div
+          ></a>
+          <div class="project-category">Banner &amp; Promotion</div>
+          <div class="project-title-row">
+            <h2>Campaign Banner</h2>
+            <a
+              href="#project-03"
+              data-project="03"
+              aria-label="Campaign Banner 자세히 보기"
+              >↗</a
+            >
+          </div>
+          <p class="project-description">프로모션 배너 디자인</p>
+        </article>
+        <article class="work-card" data-category="photography">
+          <a
+            class="project-preview"
+            href="#project-04"
+            data-project="04"
+            aria-label="Product Photography 프로젝트 자세히 보기"
+            ><div class="project-placeholder" aria-hidden="true"></div
+          ></a>
+          <div class="project-category">Photography</div>
+          <div class="project-title-row">
+            <h2>Product Photography</h2>
+            <a
+              href="#project-04"
+              data-project="04"
+              aria-label="Product Photography 자세히 보기"
+              >↗</a
+            >
+          </div>
+          <p class="project-description">제품 촬영과 이미지 보정</p>
+        </article>
+        <article class="work-card" data-category="video">
+          <a
+            class="project-preview"
+            href="#project-05"
+            data-project="05"
+            aria-label="Promotional Video 프로젝트 자세히 보기"
+            ><div class="project-placeholder" aria-hidden="true"></div
+          ></a>
+          <div class="project-category">Video &amp; Motion</div>
+          <div class="project-title-row">
+            <h2>Promotional Video</h2>
+            <a
+              href="#project-05"
+              data-project="05"
+              aria-label="Promotional Video 자세히 보기"
+              >↗</a
+            >
+          </div>
+          <p class="project-description">영상 콘텐츠 기획 및 편집</p>
+        </article>
+        <article class="work-card" data-category="branding">
+          <a
+            class="project-preview"
+            href="#project-06"
+            data-project="06"
+            aria-label="Brand Concept 프로젝트 자세히 보기"
+            ><div class="project-placeholder" aria-hidden="true"></div
+          ></a>
+          <div class="project-category">Branding</div>
+          <div class="project-title-row">
+            <h2>Brand Concept</h2>
+            <a
+              href="#project-06"
+              data-project="06"
+              aria-label="Brand Concept 자세히 보기"
+              >↗</a
+            >
+          </div>
+          <p class="project-description">브랜드 비주얼 콘셉트</p>
+        </article>
+        <article class="work-card" data-category="detail">
+          <a
+            class="project-preview"
+            href="#project-07"
+            data-project="07"
+            aria-label="Skincare Detail Page 프로젝트 자세히 보기"
+            ><div class="project-placeholder" aria-hidden="true"></div
+          ></a>
+          <div class="project-category">Detail Page</div>
+          <div class="project-title-row">
+            <h2>Skincare Detail Page</h2>
+            <a
+              href="#project-07"
+              data-project="07"
+              aria-label="Skincare Detail Page 자세히 보기"
+              >↗</a
+            >
+          </div>
+          <p class="project-description">화장품 상세페이지 프로젝트</p>
+        </article>
+        <article class="work-card" data-category="uiux">
+          <a
+            class="project-preview"
+            href="#project-08"
+            data-project="08"
+            aria-label="App UI Concept 프로젝트 자세히 보기"
+            ><div class="project-placeholder" aria-hidden="true"></div
+          ></a>
+          <div class="project-category">Web / UI Design</div>
+          <div class="project-title-row">
+            <h2>App UI Concept</h2>
+            <a
+              href="#project-08"
+              data-project="08"
+              aria-label="App UI Concept 자세히 보기"
+              >↗</a
+            >
+          </div>
+          <p class="project-description">앱 UI 디자인 프로젝트</p>
+        </article>
+      </div>
+    </main>
+    <footer class="portfolio-footer">
+      <span>© 2026 YOUR NAME</span><a href="#top">BACK TO TOP ↑</a>
+    </footer>
+    <div class="modal-backdrop" id="projectModal" hidden>
+      <section
+        class="project-modal long-project-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+        tabindex="-1"
+      >
+        <header class="project-modal-topbar">
+          <span>PROJECT DETAILS</span
+          ><button
+            class="modal-close"
+            type="button"
+            aria-label="프로젝트 상세 닫기"
+          >
+            ×
+          </button>
+        </header>
+        <div class="project-modal-body">
+          <div class="project-modal-heading">
+            <span class="modal-eyebrow" id="modalType"></span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalIntro"></p>
+          </div>
+          <div class="project-modal-main-visual" id="modalVisual">
+            <span class="visual-label" id="modalCategory"></span
+            ><span class="visual-number" id="modalNumber"></span
+            ><span class="placeholder-hint"
+              >PROJECT MAIN VISUAL<br><small
+                >대표 이미지 교체 영역</small
+              ></span
+            >
+          </div>
+          <div class="project-modal-info">
+            <div>
+              <span class="section-kicker">01 / OVERVIEW</span>
+              <h3>Project Overview</h3>
+              <p id="modalDescription"></p>
+              <p class="editing-hint">
+                프로젝트 배경, 목표, 핵심 메시지를 이곳에 정리하세요.
+              </p>
+            </div>
+            <dl>
+              <div>
+                <dt>Category</dt>
+                <dd id="modalWork"></dd>
+              </div>
+              <div>
+                <dt>Role</dt>
+                <dd id="modalRole"></dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd id="modalTools"></dd>
+              </div>
+              <div>
+                <dt>Period</dt>
+                <dd>작업 기간 입력</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="project-modal-section">
+            <span class="section-kicker">02 / PROCESS</span>
+            <h3>Design Process</h3>
+            <p>
+              기획 의도와 문제를 해결한 과정을 보여주는 영역입니다. 실제
+              프로젝트에 맞춰 텍스트를 수정하세요.
+            </p>
+            <div class="project-process-grid">
+              <div>
+                <b>01. Research</b>
+                <p>시장·사용자 조사 및 기존 디자인 분석</p>
+              </div>
+              <div>
+                <b>02. Planning</b>
+                <p>콘텐츠 구성과 정보 흐름 설계</p>
+              </div>
+              <div>
+                <b>03. Design</b>
+                <p>시안 제작, 수정 및 최종 디자인</p>
+              </div>
+            </div>
+          </div>
+          <div class="project-modal-section">
+            <span class="section-kicker">03 / DESIGN DETAILS</span>
+            <h3>Design Details</h3>
+            <p>
+              상세페이지처럼 길게 이미지와 설명을 배치할 수 있어요. 아래 회색
+              영역을 실제 결과물 이미지로 바꾸면 됩니다.
+            </p>
+            <div class="detail-image-placeholder tall">
+              <span
+                >LONG DETAIL IMAGE<br><small
+                  >세로형 상세 이미지 영역</small
+                ></span
+              >
+            </div>
+            <div class="detail-image-row">
+              <div class="detail-image-placeholder"><span>DETAIL 01</span></div>
+              <div class="detail-image-placeholder"><span>DETAIL 02</span></div>
+            </div>
+          </div>
+          <div class="project-modal-section project-modal-outcome">
+            <span class="section-kicker">04 / RESULT</span>
+            <h3>Result &amp; Reflection</h3>
+            <p>
+              프로젝트의 결과, 개선한 점, 배운 점을 정리하세요. 성과 수치가
+              있다면 이 영역에 추가하면 좋습니다.
+            </p>
+          </div>
+          <div class="project-modal-bottom">
+            <span>THANK YOU FOR VIEWING</span
+            ><button type="button" class="modal-bottom-close">
+              CLOSE PROJECT ↑
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

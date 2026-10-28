@@ -1,0 +1,221 @@
+/* V18 Resume: white minimal layout, edit text in resume.html */
+.resume-page {
+    max-width: 1190px;
+    margin: auto;
+    padding: 65px clamp(22px, 6vw, 90px) 110px
+}
+
+.resume-heading {
+    text-align: center;
+    padding: 0 0 62px
+}
+
+.resume-eyebrow {
+    font-size: 11px;
+    letter-spacing: .17em;
+    color: #7c827e
+}
+
+.resume-heading h1 {
+    font-size: clamp(60px, 8vw, 104px);
+    font-weight: 400;
+    letter-spacing: -.065em;
+    line-height: 1.1;
+    margin: 15px 0 20px
+}
+
+.resume-subtitle {
+    font-size: 15px;
+    color: #626765;
+    word-break: keep-all
+}
+
+.resume-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    padding: 34px 0 40px;
+    border-top: 1px solid #252b27
+}
+
+.resume-label {
+    font-size: 11px;
+    letter-spacing: .12em;
+    color: #777;
+    margin: 0 0 12px
+}
+
+.resume-profile h2 {
+    font-size: 34px;
+    margin: 0 0 9px
+}
+
+.resume-profile p:last-child {
+    font-size: 14px;
+    color: #606765;
+    margin: 0
+}
+
+.resume-download {
+    background: #252b27;
+    color: #fff;
+    padding: 16px 21px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    display: inline-flex;
+    gap: 30px;
+    align-items: center
+}
+
+.resume-download:hover {
+    background: #424a45
+}
+
+.resume-section {
+    display: grid;
+    grid-template-columns: 270px minmax(0, 1fr);
+    gap: 34px;
+    padding: 38px 0;
+    border-top: 1px solid #e1e3e0
+}
+
+.resume-section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px
+}
+
+.resume-section-head span {
+    font-size: 11px;
+    color: #8b908d
+}
+
+.resume-section-head h2 {
+    font-size: 21px;
+    letter-spacing: -.025em;
+    margin: 0;
+    font-weight: 600
+}
+
+.resume-section-body {
+    font-size: 14px;
+    line-height: 1.8
+}
+
+.resume-section-body>p {
+    margin: 0 0 12px
+}
+
+.resume-muted {
+    color: #777
+}
+
+.resume-job {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 18px
+}
+
+.resume-job h3 {
+    font-size: 19px;
+    margin: 0 0 3px
+}
+
+.resume-job p {
+    margin: 0
+}
+
+.responsibility {
+    padding: 0 0 18px;
+    margin: 0 0 18px;
+    border-bottom: 1px solid #eee
+}
+
+.responsibility:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0
+}
+
+.responsibility h3 {
+    font-size: 16px;
+    margin: 0 0 5px
+}
+
+.responsibility p {
+    margin: 0;
+    color: #626765
+}
+
+.competency-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px
+}
+
+.competency-grid div {
+    background: #f1f2f0;
+    border-radius: 12px;
+    padding: 23px 19px;
+    font-size: 14px;
+    font-weight: 600
+}
+
+.resume-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
+}
+
+.resume-tools span {
+    border: 1px solid #d5d9d5;
+    border-radius: 99px;
+    padding: 8px 14px;
+    font-size: 13px
+}
+
+.resume-note {
+    font-size: 12px;
+    color: #898e89;
+    margin-top: 25px
+}
+
+@media(max-width:750px) {
+    .resume-section {
+        grid-template-columns: 1fr;
+        gap: 18px
+    }
+
+    .resume-page {
+        padding-top: 45px
+    }
+
+    .resume-heading {
+        padding-bottom: 45px
+    }
+}
+
+@media(max-width:480px) {
+    .resume-profile {
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .resume-download {
+        width: 100%;
+        justify-content: space-between
+    }
+
+    .competency-grid {
+        grid-template-columns: 1fr
+    }
+
+    .resume-heading h1 {
+        font-size: 64px
+    }
+}

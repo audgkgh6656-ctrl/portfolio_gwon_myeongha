@@ -1,0 +1,551 @@
+/* V15 Portfolio page — reference wireframe, light editorial layout */
+body.portfolio-layout {
+    background: #fff;
+    color: #111
+}
+
+.portfolio-layout .site-nav {
+    max-width: none;
+    padding: 19px clamp(24px, 6vw, 100px);
+    border-bottom: 1px solid #eee
+}
+
+.portfolio-layout .brand {
+    font-weight: 600;
+    letter-spacing: 0;
+    font-size: 14px
+}
+
+.portfolio-layout .nav-links a {
+    color: #555;
+    font-size: 13px
+}
+
+.portfolio-layout .nav-links a.active,
+.portfolio-layout .nav-links a:hover {
+    color: #111;
+    border-color: #111
+}
+
+.portfolio-layout .portfolio-page {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 46px clamp(24px, 6vw, 90px) 115px
+}
+
+.portfolio-layout .portfolio-title {
+    text-align: center;
+    font-size: clamp(58px, 7.1vw, 96px);
+    font-weight: 400;
+    letter-spacing: -.065em;
+    line-height: 1.2;
+    margin: 0 0 46px
+}
+
+.portfolio-layout .filter-bar {
+    justify-content: center;
+    align-items: center;
+    gap: clamp(12px, 2.1vw, 30px);
+    border: 0;
+    margin: 0 0 60px
+}
+
+.portfolio-layout .filter-bar button {
+    padding: 8px 1px;
+    border: 0;
+    color: #222;
+    font-size: clamp(12px, 1.08vw, 15px);
+    white-space: nowrap;
+    transition: color .2s
+}
+
+.portfolio-layout .filter-bar button.selected {
+    font-weight: 700;
+    color: #111;
+    border-bottom: 2px solid #111
+}
+
+.portfolio-layout .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 58px 38px
+}
+
+.portfolio-layout .project-preview {
+    display: block;
+    overflow: hidden
+}
+
+.portfolio-layout .project-placeholder {
+    aspect-ratio: 1;
+    background: #dedede;
+    transition: background .2s, transform .3s
+}
+
+.portfolio-layout .project-preview:hover .project-placeholder {
+    background: #cecece;
+    transform: scale(1.025)
+}
+
+.portfolio-layout .project-category {
+    font-size: 11px;
+    color: #666;
+    margin-top: 11px
+}
+
+.portfolio-layout .project-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px
+}
+
+.portfolio-layout .project-title-row h2 {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 3px 0
+}
+
+.portfolio-layout .project-title-row a {
+    font-size: 24px
+}
+
+.portfolio-layout .project-description {
+    font-size: 13px;
+    margin: 4px 0 0;
+    color: #555;
+    line-height: 1.5
+}
+
+.portfolio-layout .portfolio-footer {
+    background: #252b27;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 28px clamp(24px, 6vw, 100px);
+    font-size: 11px
+}
+
+.portfolio-layout .portfolio-footer a:hover {
+    text-decoration: underline
+}
+
+.portfolio-layout .project-modal {
+    background: #fff;
+    color: #111;
+    border-color: #ddd
+}
+
+.portfolio-layout .modal-close {
+    color: #111
+}
+
+.portfolio-layout .modal-content p {
+    color: #555
+}
+
+.portfolio-layout .modal-content dl>div {
+    border-color: #ddd
+}
+
+.portfolio-layout .modal-content dt,
+.portfolio-layout .modal-eyebrow {
+    color: #777
+}
+
+.portfolio-layout .modal-hero {
+    background: #dedede !important
+}
+
+.portfolio-layout .modal-hero .visual-art {
+    display: none
+}
+
+.portfolio-layout .modal-hero .visual-label,
+.portfolio-layout .modal-hero .visual-number {
+    color: #555
+}
+
+.portfolio-layout .modal-thumbs span {
+    background: #ddd;
+    border-color: #ccc
+}
+
+.portfolio-layout a:focus-visible,
+.portfolio-layout button:focus-visible {
+    outline: 2px solid #111;
+    outline-offset: 3px
+}
+
+@media(max-width:1000px) {
+    .portfolio-layout .portfolio-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 44px 24px
+    }
+
+    .portfolio-layout .filter-bar {
+        flex-wrap: wrap;
+        margin-bottom: 42px
+    }
+}
+
+@media(max-width:700px) {
+    .portfolio-layout .portfolio-page {
+        padding: 42px 22px 75px
+    }
+
+    .portfolio-layout .portfolio-title {
+        font-size: 64px;
+        margin-bottom: 28px
+    }
+
+    .portfolio-layout .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 34px 14px
+    }
+
+    .portfolio-layout .filter-bar {
+        gap: 9px 17px;
+        margin-bottom: 34px
+    }
+
+    .portfolio-layout .project-title-row h2 {
+        font-size: 16px
+    }
+
+    .portfolio-layout .project-description {
+        font-size: 12px
+    }
+
+    .portfolio-layout .site-nav {
+        padding: 17px 22px
+    }
+}
+
+@media(max-width:390px) {
+    .portfolio-layout .portfolio-grid {
+        grid-template-columns: 1fr
+    }
+
+    .portfolio-layout .project-placeholder {
+        aspect-ratio: 1.2
+    }
+}
+
+/* V19: Wide, long-scroll portfolio detail popup */
+.portfolio-layout .modal-backdrop {
+    padding: clamp(10px, 2.5vw, 36px);
+    background: rgba(0, 0, 0, .72);
+    align-items: center
+}
+
+.portfolio-layout .project-modal.long-project-modal {
+    display: block;
+    width: min(1160px, 100%);
+    max-height: 94dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0;
+    background: #fff;
+    color: #171717;
+    border: 0;
+    border-radius: 14px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, .24);
+    scrollbar-gutter: stable
+}
+
+.portfolio-layout .project-modal-topbar {
+    height: 64px;
+    padding: 0 clamp(20px, 4vw, 52px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e8e8e8;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .14em
+}
+
+.portfolio-layout .project-modal-topbar .modal-close {
+    position: static;
+    font-size: 33px;
+    line-height: 1;
+    color: #222;
+    padding: 8px;
+    border: 0;
+    background: transparent;
+    cursor: pointer
+}
+
+.portfolio-layout .project-modal-body {
+    padding: clamp(24px, 5vw, 66px) clamp(22px, 7vw, 90px) 42px
+}
+
+.portfolio-layout .project-modal-heading {
+    text-align: center;
+    margin: 0 auto 45px;
+    max-width: 800px
+}
+
+.portfolio-layout .project-modal-heading .modal-eyebrow {
+    display: block;
+    font-size: 12px;
+    letter-spacing: .14em;
+    color: #777;
+    text-transform: uppercase
+}
+
+.portfolio-layout .project-modal-heading h2 {
+    font-size: clamp(36px, 5vw, 66px);
+    line-height: 1.1;
+    letter-spacing: -.045em;
+    margin: 14px 0 16px;
+    font-weight: 650
+}
+
+.portfolio-layout .project-modal-heading p {
+    font-size: 15px;
+    color: #666
+}
+
+.portfolio-layout .project-modal-main-visual {
+    height: clamp(320px, 49vw, 560px);
+    background: #dedede !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px
+}
+
+.portfolio-layout .project-modal-main-visual .visual-art {
+    display: none
+}
+
+.portfolio-layout .project-modal-main-visual .visual-label {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    color: #777;
+    font-size: 12px
+}
+
+.portfolio-layout .project-modal-main-visual .visual-number {
+    position: absolute;
+    right: 30px;
+    bottom: 22px;
+    color: #777;
+    font-size: 13px
+}
+
+.portfolio-layout .placeholder-hint,
+.portfolio-layout .detail-image-placeholder span {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    color: #999;
+    line-height: 1.8
+}
+
+.portfolio-layout .placeholder-hint small,
+.portfolio-layout .detail-image-placeholder small {
+    font-size: 12px;
+    font-weight: 400
+}
+
+.portfolio-layout .project-modal-info {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: clamp(30px, 6vw, 90px);
+    padding: 76px 0 70px;
+    border-bottom: 1px solid #ddd
+}
+
+.portfolio-layout .section-kicker {
+    display: block;
+    color: #8b8b8b;
+    font-size: 11px;
+    letter-spacing: .12em;
+    margin-bottom: 14px
+}
+
+.portfolio-layout .project-modal-body h3 {
+    font-size: clamp(27px, 3vw, 37px);
+    line-height: 1.25;
+    margin: 0 0 22px;
+    letter-spacing: -.04em
+}
+
+.portfolio-layout .project-modal-body p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #555;
+    margin: 0 0 16px;
+    word-break: keep-all
+}
+
+.portfolio-layout .editing-hint {
+    color: #888 !important;
+    font-size: 13px !important
+}
+
+.portfolio-layout .project-modal-info dl {
+    margin: 0
+}
+
+.portfolio-layout .project-modal-info dl>div {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 18px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e4e4e4;
+    font-size: 14px
+}
+
+.portfolio-layout .project-modal-info dt {
+    color: #888
+}
+
+.portfolio-layout .project-modal-info dd {
+    margin: 0;
+    overflow-wrap: anywhere
+}
+
+.portfolio-layout .project-modal-section {
+    padding: 76px 0 20px
+}
+
+.portfolio-layout .project-process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 32px
+}
+
+.portfolio-layout .project-process-grid>div {
+    background: #f3f3f3;
+    padding: 25px 22px;
+    min-height: 145px
+}
+
+.portfolio-layout .project-process-grid b {
+    font-size: 15px
+}
+
+.portfolio-layout .project-process-grid p {
+    font-size: 13px;
+    margin-top: 12px
+}
+
+.portfolio-layout .detail-image-placeholder {
+    background: #dedede;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 25px
+}
+
+.portfolio-layout .detail-image-placeholder.tall {
+    min-height: 900px
+}
+
+.portfolio-layout .detail-image-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px
+}
+
+.portfolio-layout .detail-image-row .detail-image-placeholder {
+    min-height: 300px
+}
+
+.portfolio-layout .project-modal-outcome {
+    border-top: 1px solid #e4e4e4;
+    margin-top: 70px
+}
+
+.portfolio-layout .project-modal-bottom {
+    border-top: 1px solid #e4e4e4;
+    padding-top: 30px;
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color: #777;
+    font-size: 11px;
+    letter-spacing: .1em
+}
+
+.portfolio-layout .modal-bottom-close {
+    border: 1px solid #222;
+    background: #222;
+    color: #fff;
+    padding: 13px 20px;
+    cursor: pointer;
+    font-size: 12px
+}
+
+@media(max-width:700px) {
+    .portfolio-layout .project-modal.long-project-modal {
+        max-height: 96dvh;
+        border-radius: 8px
+    }
+
+    .portfolio-layout .project-modal-topbar {
+        height: 54px
+    }
+
+    .portfolio-layout .project-modal-heading {
+        margin-bottom: 25px
+    }
+
+    .portfolio-layout .project-modal-main-visual {
+        height: 300px
+    }
+
+    .portfolio-layout .project-modal-info {
+        grid-template-columns: 1fr;
+        padding: 45px 0;
+        gap: 18px
+    }
+
+    .portfolio-layout .project-modal-section {
+        padding: 48px 0 10px
+    }
+
+    .portfolio-layout .project-process-grid {
+        grid-template-columns: 1fr;
+        gap: 10px
+    }
+
+    .portfolio-layout .project-process-grid>div {
+        min-height: 0
+    }
+
+    .portfolio-layout .detail-image-placeholder.tall {
+        min-height: 650px
+    }
+
+    .portfolio-layout .detail-image-row {
+        gap: 10px
+    }
+
+    .portfolio-layout .detail-image-row .detail-image-placeholder {
+        min-height: 180px
+    }
+
+    .portfolio-layout .project-modal-bottom {
+        flex-direction: column;
+        align-items: flex-start
+    }
+}

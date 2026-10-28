@@ -1,0 +1,146 @@
+/* V18 shared typography and navigation for all subpages */
+body.portfolio-layout,
+body.about-v16,
+body.inner-page,
+body.resume-layout {
+    background: #fff;
+    color: #171a18;
+    font-family: Arial, "Noto Sans KR", sans-serif
+}
+
+body.portfolio-layout .site-nav,
+body.about-v16 .site-nav,
+body.inner-page .site-nav,
+body.resume-layout .site-nav {
+    max-width: none;
+    min-height: 65px;
+    padding: 18px clamp(22px, 6vw, 100px);
+    border-bottom: 1px solid #eceeed;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px
+}
+
+body.portfolio-layout .site-nav .brand,
+body.about-v16 .site-nav .brand,
+body.inner-page .site-nav .brand,
+body.resume-layout .site-nav .brand {
+    font-size: 14px;
+    letter-spacing: 0;
+    font-weight: 700;
+    color: #171a18
+}
+
+body.portfolio-layout .site-nav .nav-links,
+body.about-v16 .site-nav .nav-links,
+body.inner-page .site-nav .nav-links,
+body.resume-layout .site-nav .nav-links {
+    display: flex;
+    gap: clamp(12px, 2.7vw, 36px);
+    align-items: center
+}
+
+body.portfolio-layout .site-nav .nav-links a,
+body.about-v16 .site-nav .nav-links a,
+body.inner-page .site-nav .nav-links a,
+body.resume-layout .site-nav .nav-links a {
+    font-size: 13px;
+    font-weight: 400;
+    color: #626765;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    padding: 4px 0 7px;
+    white-space: nowrap;
+    transition: color .2s
+}
+
+body.portfolio-layout .site-nav .nav-links a.active,
+body.about-v16 .site-nav .nav-links a.active,
+body.inner-page .site-nav .nav-links a.active,
+body.resume-layout .site-nav .nav-links a.active,
+body.portfolio-layout .site-nav .nav-links a:hover,
+body.about-v16 .site-nav .nav-links a:hover,
+body.inner-page .site-nav .nav-links a:hover,
+body.resume-layout .site-nav .nav-links a:hover {
+    color: #171a18;
+    border-bottom-color: #171a18
+}
+
+body.inner-page .content-page {
+    background: #fff;
+    color: #171a18
+}
+
+body.inner-page .content-page .content-lead {
+    color: #606765
+}
+
+body.inner-page .content-page .page-kicker,
+body.inner-page .content-page .page-footnote {
+    color: #777
+}
+
+body.inner-page .content-page .contact-email {
+    color: #171a18
+}
+
+body.inner-page .content-page .back-home {
+    color: #666
+}
+
+body.portfolio-layout a:focus-visible,
+body.about-v16 a:focus-visible,
+body.inner-page a:focus-visible,
+body.resume-layout a:focus-visible,
+body.resume-layout button:focus-visible {
+    outline: 2px solid #252b27;
+    outline-offset: 4px
+}
+
+.shared-footer {
+    background: #252b27;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 26px clamp(22px, 6vw, 100px);
+    font-size: 11px
+}
+
+@media(max-width:600px) {
+
+    body.portfolio-layout .site-nav,
+    body.about-v16 .site-nav,
+    body.inner-page .site-nav,
+    body.resume-layout .site-nav {
+        padding: 16px 22px;
+        flex-wrap: wrap;
+        gap: 12px
+    }
+
+    body.portfolio-layout .site-nav .nav-links,
+    body.about-v16 .site-nav .nav-links,
+    body.inner-page .site-nav .nav-links,
+    body.resume-layout .site-nav .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 9px
+    }
+
+    body.portfolio-layout .site-nav .nav-links a,
+    body.about-v16 .site-nav .nav-links a,
+    body.inner-page .site-nav .nav-links a,
+    body.resume-layout .site-nav .nav-links a {
+        font-size: 12px
+    }
+}
+
+/* V21: Navigation only; Home already leads to the main page. */
+body.portfolio-layout .site-nav,
+body.about-v16 .site-nav,
+body.inner-page .site-nav,
+body.resume-layout .site-nav {
+    justify-content: flex-end
+}

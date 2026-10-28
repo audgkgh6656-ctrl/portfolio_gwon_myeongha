@@ -1,0 +1,81 @@
+/* V20: consistent typography and heading sizing across all pages. */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+  --site-font: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  --page-title-size: clamp(56px, 6.5vw, 88px);
+}
+
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--site-font) !important;
+}
+
+/* Force the same heading style, regardless of each page's original CSS. */
+body.portfolio-layout .portfolio-title,
+body.about-v16 .about-hero h1,
+body.inner-page .content-page h1,
+body.resume-layout .resume-heading h1 {
+  font-family: var(--site-font) !important;
+  font-size: var(--page-title-size) !important;
+  font-weight: 400 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.055em !important;
+  text-align: center !important;
+  margin-top: 0 !important;
+}
+
+/* Match title section's overall vertical rhythm. */
+body.portfolio-layout .portfolio-title {
+  margin-bottom: 45px !important;
+}
+
+body.about-v16 .about-hero h1 {
+  margin-bottom: 70px !important;
+}
+
+body.resume-layout .resume-heading h1 {
+  margin-bottom: 20px !important;
+}
+
+body.inner-page .content-page {
+  padding-top: 58px;
+}
+
+body.inner-page .content-page h1 {
+  margin: 0 0 28px !important;
+}
+
+body.inner-page .content-page .page-kicker {
+  display: none;
+}
+
+body.inner-page .content-page .content-lead {
+  text-align: center;
+}
+
+body.inner-page .content-page .period {
+  color: #171a18;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --page-title-size: clamp(52px, 11vw, 68px);
+  }
+
+  body.portfolio-layout .portfolio-title {
+    margin-bottom: 30px !important;
+  }
+
+  body.about-v16 .about-hero h1 {
+    margin-bottom: 38px !important;
+  }
+
+  body.inner-page .content-page {
+    padding-top: 42px;
+  }
+}
