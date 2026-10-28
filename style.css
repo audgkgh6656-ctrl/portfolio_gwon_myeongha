@@ -262,16 +262,16 @@ a.tile:hover {
 
 .tile.portfolio {
   grid-row: span 2;
-  background: #222525
+  background: #252B27
 }
 
 .tile.about {
-  background: #a4aca8;
+  background: #A4AF91;
   color: #111
 }
 
 .tile.contact {
-  background: #d4d5d0;
+  background: #D7CCB9;
   color: #111
 }
 
@@ -280,7 +280,8 @@ a.tile:hover {
 }
 
 .tile.resume {
-  background: #777e7c
+  background: #A4AF91;
+  color: #111
 }
 
 .tile-title {
