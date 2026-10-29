@@ -10,11 +10,7 @@
     padding: 0 0 62px
 }
 
-.resume-eyebrow {
-    font-size: 11px;
-    letter-spacing: .17em;
-    color: #7c827e
-}
+
 
 .resume-heading h1 {
     font-size: clamp(60px, 8vw, 104px);
@@ -24,11 +20,7 @@
     margin: 15px 0 20px
 }
 
-.resume-subtitle {
-    font-size: 15px;
-    color: #626765;
-    word-break: keep-all
-}
+
 
 .resume-profile {
     display: flex;
@@ -71,7 +63,7 @@
 }
 
 .resume-download:hover {
-    background: #424a45
+    background: #A4AF91
 }
 
 .resume-section {
@@ -164,6 +156,11 @@
     padding: 23px 19px;
     font-size: 14px;
     font-weight: 600
+}
+
+.competency-grid div span{
+    font-size: 12px;
+    font-weight: 300
 }
 
 .resume-tools {
