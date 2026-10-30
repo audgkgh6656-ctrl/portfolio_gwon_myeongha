@@ -133,3 +133,31 @@ document.querySelectorAll("img").forEach(img => {
   const selected = document.querySelector('.filter-bar [data-filter].selected')?.dataset.filter || 'all';
   items.forEach(({ card }) => { card.hidden = selected !== 'all' && card.dataset.category !== selected; });
 })();
+
+
+// 모달을 닫으면 영상 재생 완전히 중지
+function stopModalVideos() {
+  document.querySelectorAll(".modal-backdrop").forEach(modal => {
+    if (location.hash === `#${modal.id}`) return;
+
+    modal.querySelectorAll("iframe").forEach(iframe => {
+      const parent = iframe.parentNode;
+      const next = iframe.nextSibling;
+      const replacement = iframe.cloneNode(true);
+
+      // 기존 iframe 제거 → 영상 재생 종료
+      iframe.remove();
+
+      // 새 iframe 삽입 → 다음에 열 때 정상 재생
+      parent.insertBefore(replacement, next);
+    });
+
+    // HTML video 태그가 있다면 일시정지
+    modal.querySelectorAll("video").forEach(video => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+}
+
+window.addEventListener("hashchange", stopModalVideos);

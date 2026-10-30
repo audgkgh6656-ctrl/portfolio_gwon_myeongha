@@ -591,7 +591,9 @@ body.portfolio-layout {
 }
 /* 05번 모달의 이미지 3개 */
 #project-05 .detail-image-row,
-#project-09 .detail-image-row 
+#project-09 .detail-image-row,
+#project-10 .detail-image-row,
+#project-11 .detail-image-row
 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -600,7 +602,9 @@ body.portfolio-layout {
 
 /* 이미지 박스 */
 #project-05 .detail-image-row .detail-image-placeholder,
-#project-09 .detail-image-row .detail-image-placeholder 
+#project-09 .detail-image-row .detail-image-placeholder,
+#project-10 .detail-image-row .detail-image-placeholder,
+#project-11 .detail-image-row .detail-image-placeholder
 {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -614,7 +618,9 @@ body.portfolio-layout {
 
 /* 이미지 꽉 채우기 */
 #project-05 .detail-image-row .detail-image-placeholder img,
-#project-09 .detail-image-row .detail-image-placeholder img
+#project-09 .detail-image-row .detail-image-placeholder img,
+#project-10 .detail-image-row .detail-image-placeholder img,
+#project-11 .detail-image-row .detail-image-placeholder img
  {
   width: 100%;
   height: 100%;
@@ -625,7 +631,10 @@ body.portfolio-layout {
 /* 모바일에서도 3개 유지 */
 @media (max-width: 600px) {
   #project-05 .detail-image-row,
-  #project-09 .detail-image-row {
+  #project-09 .detail-image-row,
+  #project-10 .detail-image-row,
+  #project-11 .detail-image-row
+  {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 5px;
   }
