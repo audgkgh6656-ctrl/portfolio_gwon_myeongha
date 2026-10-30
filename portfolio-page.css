@@ -73,7 +73,16 @@ body.portfolio-layout {
 
 .portfolio-layout .project-preview {
     display: block;
-    overflow: hidden
+    overflow: hidden;
+    width: 100%;
+    min-width: 0;
+}
+
+.project-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .portfolio-layout .project-placeholder {
@@ -316,7 +325,7 @@ body.portfolio-layout {
 
 .portfolio-layout .project-modal-main-visual {
     height: clamp(320px, 49vw, 560px);
-    background: #dedede !important;
+    background: #fff !important;
     position: relative;
     display: flex;
     align-items: center;
@@ -549,3 +558,87 @@ body.portfolio-layout {
         align-items: flex-start
     }
 }
+
+/* 모달 대표 이미지 */
+.portfolio-layout .project-modal-main-visual {
+  overflow: hidden;
+}
+
+.portfolio-layout .project-modal-main-visual .modal-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Final Design 유튜브 영상 */
+.portfolio-layout .detail-image-placeholder.video-container {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  margin-top: 25px;
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+.portfolio-layout .video-container iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+/* 05번 모달의 이미지 3개 */
+#project-05 .detail-image-row,
+#project-09 .detail-image-row 
+{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+/* 이미지 박스 */
+#project-05 .detail-image-row .detail-image-placeholder,
+#project-09 .detail-image-row .detail-image-placeholder 
+{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 0;
+  margin-top: 15px;
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* 이미지 꽉 채우기 */
+#project-05 .detail-image-row .detail-image-placeholder img,
+#project-09 .detail-image-row .detail-image-placeholder img
+ {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 모바일에서도 3개 유지 */
+@media (max-width: 600px) {
+  #project-05 .detail-image-row,
+  #project-09 .detail-image-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+  }
+}
+
+
+/* HTML-only individual project modals (:target) */
+.portfolio-layout .modal-backdrop { display: none; }
+.portfolio-layout .modal-backdrop:target { display: flex; position: fixed; inset: 0; z-index: 9999; justify-content: center; }
+.portfolio-layout .modal-backdrop .modal-close,
+.portfolio-layout .modal-backdrop .modal-bottom-close { text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+.portfolio-layout .project-modal-main-visual > img,
+.portfolio-layout .project-modal-main-visual > iframe { width: 100%; height: 100%; object-fit: contain; border: 0; display: block; }
+.portfolio-layout .detail-image-placeholder:has(> img) { height: auto; min-height: 0; background: transparent; display: block; }
+.portfolio-layout .detail-image-placeholder > img { display: block; width: 100%; height: auto; }
+.portfolio-layout .detail-image-placeholder > iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }

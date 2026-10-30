@@ -1032,6 +1032,33 @@ body.home-page {
   }
 }
 
+/* 05번 모달 이미지 3개 배치 */
+#project-05 .detail-image-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+/* 박스 크기 */
+#project-05 .detail-image-row .detail-image-placeholder {
+  min-height: 200px;
+  margin-top: 15px;
+}
+
+/* 실제 이미지 삽입 시 */
+#project-05 .detail-image-row img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 모바일에서는 한 줄에 하나씩 */
+@media (max-width: 600px) {
+  #project-05 .detail-image-row {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Accessibility: hidden heading for the full-screen intro section */
 .visually-hidden {
   position: absolute !important;
