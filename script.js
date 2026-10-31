@@ -128,12 +128,7 @@ document.querySelectorAll("img").forEach(img => {
     const order = Number(modal.dataset.order);
     items.push({ card, order: Number.isFinite(order) && order > 0 ? order : 9999, index });
   });
-  const categoryOrder = ['detail', 'uiux', 'banner', 'photography', 'video', 'branding'];
-  items.sort((a, b) => {
-    const ca = categoryOrder.indexOf(a.card.dataset.category);
-    const cb = categoryOrder.indexOf(b.card.dataset.category);
-    return (ca < 0 ? 999 : ca) - (cb < 0 ? 999 : cb) || a.order - b.order || a.index - b.index;
-  });
+  items.sort((a, b) => a.order - b.order || a.index - b.index);
   items.forEach(({ card }) => grid.appendChild(card));
   const selected = document.querySelector('.filter-bar [data-filter].selected')?.dataset.filter || 'all';
   items.forEach(({ card }) => { card.hidden = selected !== 'all' && card.dataset.category !== selected; });
