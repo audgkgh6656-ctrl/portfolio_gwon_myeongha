@@ -92,6 +92,11 @@ document.querySelectorAll("img").forEach(img => {
   if (!grid) return;
   const labels = { detail: 'Detail Page', uiux: 'Web / UI Design', banner: 'Banner & Promotion', photography: 'Photography', video: 'Video & Motion', branding: 'Branding' };
   const modals = [...document.querySelectorAll('.modal-backdrop[data-auto-card]')];
+  const validIds = new Set(modals.map(modal => modal.id).filter(Boolean));
+  grid.querySelectorAll('.work-card').forEach(card => {
+    const href = card.querySelector('.project-preview')?.getAttribute('href') || '';
+    if (href.startsWith('#project-') && !validIds.has(href.slice(1))) card.remove();
+  });
   const seen = new Set();
   const items = [];
   modals.forEach((modal, index) => {
